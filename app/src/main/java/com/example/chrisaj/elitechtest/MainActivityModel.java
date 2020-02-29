@@ -3,7 +3,7 @@ package com.example.chrisaj.elitechtest;
 import android.app.Application;
 
 import com.example.chrisaj.elitechtest.model.UserModel;
-import com.example.chrisaj.elitechtest.model.UserRepository;
+import com.example.chrisaj.elitechtest.https.UserRepository;
 
 import java.util.List;
 

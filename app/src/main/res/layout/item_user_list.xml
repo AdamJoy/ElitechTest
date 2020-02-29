@@ -10,6 +10,10 @@
             name="user"
             type="com.example.chrisaj.elitechtest.model.UserModel" />
         <import type="android.view.View"/>
+
+        <variable
+            name="itemclick"
+            type="com.example.chrisaj.elitechtest.adapter.UserListAdapter.ItemClick" />
     </data>
 
     <LinearLayout
@@ -28,7 +32,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white">
+                android:background="@android:color/white"
+                android:onClick="@{(view)->itemclick.onClicked(view, user)}">
 
                 <!--DataBinding使用 -->
 

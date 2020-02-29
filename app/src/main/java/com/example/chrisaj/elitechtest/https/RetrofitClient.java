@@ -9,12 +9,11 @@ public class RetrofitClient {
 
 
     public static UserDataService getService() {
-        if(mRetrofit == null) {
-            mRetrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-        }
-        return mRetrofit.create(UserDataService.class);
+
+           mRetrofit = new Retrofit.Builder()
+                   .baseUrl(BASE_URL)
+                   .addConverterFactory(GsonConverterFactory.create())
+                   .build();
+       return mRetrofit.create(UserDataService.class);
     }
 }
