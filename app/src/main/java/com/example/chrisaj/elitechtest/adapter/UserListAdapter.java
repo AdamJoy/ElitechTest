@@ -18,7 +18,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- *  User RecyclerView adapter
+ *  人員列表 adapter
  */
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserViewHolder> {
 
@@ -26,7 +26,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
     private ItemClick mItemClick;
 
     public UserListAdapter(ItemClick itemClick) {
-        this.mItemClick = itemClick;    // adapter 取得itemClick事件
+        this.mItemClick = itemClick;   // 取得itemClick事件
     }
 
     @NonNull
@@ -52,8 +52,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
             currentUser.setOrganize(true);
         }
 
-        holder.userListItemBinding.setItemclick(mItemClick);
-        holder.userListItemBinding.setUser(currentUser);
+        holder.userListItemBinding.setItemclick(mItemClick);// 設定ItemClickListener給xml
+        holder.userListItemBinding.setUser(currentUser);    // 設定user給xml
     }
 
     @Override
@@ -64,7 +64,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
             return 0;
         }
     }
-
+    // 新增多筆Item
     public void setUserList(ArrayList<UserModel> userList) {
         if(mUserList == null) {
             mUserList = new ArrayList<>();
@@ -73,19 +73,19 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         notifyDataSetChanged();
     }
 
+    // 插入多筆Item
     public void addUserList(ArrayList<UserModel> userList) {
         mUserList.addAll(userList);
         Log.d("TAG","插入資料數量 = " + userList.size());
         Log.d("TAG","插入資料數量_總數量 = " + mUserList.size());
         notifyDataSetChanged();
     }
-
+    // 增加單一Item
     public void addSingleUserItem(UserModel userItem) {
         if(mUserList != null) {
             mUserList.add(userItem);
         }
     }
-
     // 取得目前最後一筆User_Id
     public int getLastUserId() {
         if(mUserList != null) {
@@ -93,7 +93,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         }
         return 0;
     }
-
+    // ViewHolder
     class UserViewHolder extends RecyclerView.ViewHolder {
         private  ItemUserListBinding userListItemBinding;
 

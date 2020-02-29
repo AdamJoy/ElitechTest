@@ -13,7 +13,7 @@ import java.io.Serializable;
 import androidx.databinding.BindingAdapter;
 
 /**
- *  User model
+ *  人員列表 Model
  */
 public class UserModel implements Serializable {
 

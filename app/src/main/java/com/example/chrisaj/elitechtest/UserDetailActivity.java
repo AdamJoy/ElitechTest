@@ -21,7 +21,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 /**
- *  個人詳細頁 User_Detail
+ *  個人詳細頁主頁
  */
 public class UserDetailActivity extends AppCompatActivity {
 

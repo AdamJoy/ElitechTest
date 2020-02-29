@@ -12,6 +12,9 @@ import com.google.gson.annotations.SerializedName;
 
 import androidx.databinding.BindingAdapter;
 
+/**
+ *  個人詳細頁  Model
+ */
 public class UserDetailModel {
 
     @SerializedName("login")
